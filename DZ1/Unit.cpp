@@ -10,7 +10,7 @@ Unit::Unit(string un, int b)
 
 
 Unit::~Unit()
-{
+{ // !
 }
 
 void Unit::ucalc() {
