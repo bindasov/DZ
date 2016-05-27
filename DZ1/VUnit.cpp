@@ -8,7 +8,7 @@ VUnit::VUnit()
 
 
 VUnit::~VUnit()
-{
+{ // в v указатели на Unit. Утечка.
 }
 
 void VUnit::create(string un, int b) {
@@ -22,7 +22,7 @@ void VUnit::disband(string un) {
 			b = true;
 			v.erase(v.begin() + i);
 		}
-	if (!b) cout << "No such unit" << endl;
+	if (!b) cout << "No such unit" << endl; // exception!
 };
 
 void VUnit::hire(string un, string en) {
@@ -60,7 +60,7 @@ void VUnit::findanddo(string un, string en, int com) {
 void VUnit::promosion(string un, string en, string unm) {
 	bool b = false, c = false, d = false;
 	for (int i = 0; i < v.size(); i++) {
-		if (v[i]->uname == un) {
+		if (v[i]->uname == un) { // видел у Тарасова в лабе, не вникал, можно упростить.
 			b = true;
 			for (int j = 0; j < v[i]->vec.size(); j++)
 				if (v[i]->vec[j]->name == en) {

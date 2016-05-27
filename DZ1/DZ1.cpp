@@ -95,7 +95,7 @@ int main()
 		{
 			ifstream file("1.txt");
 			vun.readfrom(file);
-			file.close();
+			file.close(); // close делается сам при разрушении
 		}
 		if (command == "save")
 		{

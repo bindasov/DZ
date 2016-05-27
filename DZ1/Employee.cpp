@@ -15,7 +15,7 @@ Employee::Employee(string n, string u, int usal)
 
 Employee::~Employee()
 {
-	history.clear();
+	history.clear(); // оно же разрушится. зачем?
 }
 
 void Employee::calc() {
@@ -38,7 +38,7 @@ void Employee::mult(double m) {
 		cout << name << " got a new mult" << endl;
 		history.push_back(" got a new mult");
 	}
-	else cout << "You can't set less than 1 mult";
+	else cout << "You can't set less than 1 mult"; // студент обычно знает, что еще как может)
 };
 
 void Employee::trip(int s) {
